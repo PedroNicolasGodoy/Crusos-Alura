@@ -1,0 +1,63 @@
+<meta charset="utf-8">
+
+
+
+
+<script>
+	function saltarLinea () {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}	
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+	}
+
+	function calcularImc(peso,altura) {
+
+		return (peso / (altura * altua));
+
+	}
+
+	nombre = prompt("informe su nombre")
+	pesoInformado = prompt(nombre + " informe su peso")
+	alturaInformada = prompt(nombre + " informe su altura")
+
+	imcCalculado = calcularImc(pesoInformado,alturaInformada)
+
+	imprimir(nombre + ", su imc es igual a: " + imcCalculado);
+
+	if (imcCalculado < 18.5) {
+		imprimir("IMC abajo de lo recomendado");
+
+	}
+
+	if (imcCalculado >= 18.5) { 
+
+		if (imcCalculado < 25) {
+			imprimir("IMC está dentro de lo normal");
+
+		}
+
+	}
+
+	if (imcCalculado >= 25) {
+
+		if (imcCalculado < 30) {
+			imprimir("IMC está con sobrepeso");
+		}
+	}
+
+
+	if (imcCalculado >= 30) {
+		if  (imcCalculado <= 35) {
+			imprimir("IMC está con obesidad");
+		}
+	}
+
+</script>

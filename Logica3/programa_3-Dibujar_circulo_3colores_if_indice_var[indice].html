@@ -1,0 +1,57 @@
+<canvas width="600" height = "400"></canvas> 
+
+
+
+<script>
+	
+
+	
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d"); 
+
+	pincel.fillStyle = "grey";
+	pincel.fillRect(0,0,600,400);
+	
+	//function exibirAlerta (evento) {
+
+	//	var x = evento.pageX - pantalla.offsetleft; //pasa las coordenadas donde se hace click, resto el margen que hay de color blanco arriba a la izquierda
+	//	var y = evento.pageY - pantalla.offsetTop; // idem anterior, pero resto el margen que está a la izquierda en blanco
+	//	console.log(evento)
+	//	alert(x + "," + y);
+
+	//}
+
+	var color = ["blue", "red", "green"];
+	var indiceColorActual = 0; //establecemos una variable con la posición del color actual
+	
+	function dibujarCirculo (evento) {
+
+		var x = evento.pageX - pantalla.offsetLeft;
+		var y = evento.pageY - pantalla.offsetTop; 
+
+		pincel.fillStyle = color[indiceColorActual];
+		pincel.beginPath();
+		pincel.arc(x,y,10,0,2*3.14);
+		pincel.fill();
+		console.log(x + "," + y);
+		
+	}
+
+	pantalla.onclick = dibujarCirculo;
+
+	function alterarColor() {
+		indiceColorActual++; //incremetar la posición del índice y que pase del color azul al rojo, pero no es suficiente porque necesita un límite de incremento
+		if (indiceColorActual >= color.length) {
+			indiceColorActual = 0;
+
+		}
+		
+		return false;
+
+	}
+
+	pantalla.oncontextmenu = alterarColor;
+
+
+
+</script>

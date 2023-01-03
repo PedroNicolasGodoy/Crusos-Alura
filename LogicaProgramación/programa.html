@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+
+
+<script>
+
+	
+	function saltar_linea() {
+		
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir (frase) {
+
+		document.write(frase);
+		saltar_linea(); //incorporamos la función anterior, dentro de la función imprimir para ahorrar líneas de código y que sea más prolijo, corto y por lo tanto eficiente
+
+	}
+	var anio = 2020
+	
+	imprimir("Pedro tiene: " + (anio - 2000) + " año");
+	
+	anio = 2035
+
+
+	imprimir("Carlos tiene: " + (anio - 2010) + " año");
+	
+	imprimir("Juan tiene: " + (anio - 2005) + " año");
+
+	anio = 2020
+
+	imprimir("Gimen tiene: " + (anio - 1998) + " año");
+		
+	imprimir("Laura tiene: " + (anio - 1990) + " año");
+		
+	imprimir("Paula tiene: " + (anio - 2000) + " año");
+	
+	var edad_Paula = 20
+	var edad_Gimena = 22
+	var edad_Laura = 30
+
+	var nombre1 = "Laura";
+	var nombre2 = "Gimena";
+	var nombre3 = "Paula";
+
+	promedio =  ((edad_Laura+edad_Gimena+edad_Paula)/3)
+
+	imprimir("El promedio	de edad de " + nombre3 + ", " + nombre2 + " y " + nombre1 + " es: " + Math.round(promedio));
+	
+
+
+</script>

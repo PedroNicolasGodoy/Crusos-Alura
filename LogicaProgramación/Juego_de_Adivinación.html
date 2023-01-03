@@ -1,0 +1,57 @@
+<meta charset="utf-8">
+
+ <h1>Ruleta de números</h1>
+
+<script>
+	function saltar_linea() {
+
+		document.write("<br>")
+		document.write("<br>")
+
+	}
+
+	function imprimir (mensaje) {
+
+	document.write(mensaje)
+	saltar_linea()
+
+	}
+
+	
+	var numeroPensado = Math.round(Math.random()*10); // función Matemátic de redondeo para otra función matemática en selección de un número Random y lo multiplico por 10 para que se una selección entre 1 y 10
+	var intentos = 3;
+	var contador = 1;
+
+
+	while (contador <= intentos) {
+		var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"))
+
+
+		if (numeroPensado == numeroLanzado) {
+
+			alert ("usted acertó, en el inteto " + contador + " el número pesado era " + numeroPensado)
+			break;
+
+		}
+
+		else {
+
+			alert ("usted erró")
+		}
+
+		contador++;
+
+
+	}
+
+	if (numeroPensado == numeroLanzado){
+
+		imprimir("usted acertó, en el intento " + contador + " el número era " + numeroPensado);
+	}
+
+	else {
+
+		imprimir("usted erró, el número pensado era " + numeroPensado);
+	}
+	imprimir("fin programa")
+</script>

@@ -1,0 +1,33 @@
+<canvas width="600" height = "400"></canvas> 
+
+
+
+<script>
+	//bucar más funciones en 2d canvas con explorador
+
+
+	var pantalla = document.querySelector("canvas"); //trae la etiqueta de html
+	var pincel = pantalla.getContext("2d"); //pincel para hacer los gráficos 
+
+	pincel.fillStyle = "lightgrey" //propiedad o característica
+	pincel.fillRect(0,0,600,400);//funcion rellenar "fill" un rectangulo "Rect" con 4 parámentros
+
+	pincel.fillStyle = "green" 
+	pincel.fillRect(0,0,200,400);
+
+	pincel.fillStyle = "red"
+	pincel.fillRect(400,0,200,400);
+
+	pincel.fillStyle = "yellow";
+	pincel.beginPath(); //comenzar nuevo camino de instrucciones
+	pincel.moveTo(300,200); //movete a esa posición
+	pincel.lineTo(200,400);
+	pincel.lineTo(400,400);
+	pincel.fill();
+
+
+	pincel.fillStyle = "blue";
+	pincel.beginPath(); //comenzar nuevo camino de instrucciones
+	pincel.arc(300,200,50,0,2*3.14);
+	pincel.fill();
+</script>
