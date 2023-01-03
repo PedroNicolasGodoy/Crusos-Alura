@@ -1,0 +1,86 @@
+header {
+    background-color: #BBBBBB;
+    padding: 20px;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+nav{
+    position: absolute;
+    top:110px;
+    right: 0;
+
+}
+nav li{
+    display: inline; /*es para que la alineación esté en horizontal*/
+    margin: 0 0 0 15px /*espacio entre las palabras, el primero es hacia arriba, el segundo es hacia derecha, el tercero hacia abajo, el cuarto hacia la izquierda*/
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000; /*color del texto*/
+    font-weight: bold; /*configurar con negrita*/
+    font-size: 22px; /*tamaño de pagina*/
+    text-decoration: none; /*es para sacar el susbrayado del texto*/
+}
+.producto{
+    margin: 0 auto;
+    width: 940px;
+    padding: 50px;
+}
+.producto li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px; /*es para aumentar el tamaño del elemento*/
+    box-sizing: border-box; /*tamaño de la caja, el borde de cada item será el límite del espacio que será definido*/
+    border: 2px solid #000000 ;/*primero borde ancho, segundo style, tercero color*/
+    border-radius: 10px; /*sirve para redondear las puntas de la figura, se pueden configurar las cuatro puntas distintas en un sólo comando ó las cuatro de una sola vez
+    1°top-left-radius
+    2°top-right-radius (superior derecho)
+    3°bottom-left-radius (inferior izquierdo)
+    4°bottom-left-radius*/
+}
+.producto li:hover{
+    border-color: #c78c19;
+
+}
+.productos li:active{
+    border-color:#088c19;
+}
+
+.producto h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+.producto li:hover h2{
+    font-size: 33px;
+}
+.producto-descripción{
+    font-size: 18px; /*tamaño letra*/
+}
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px; /*separa el precio de la descripción*/
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+}
