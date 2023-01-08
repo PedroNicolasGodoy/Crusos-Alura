@@ -1,49 +1,297 @@
-.titulo-principal{
-    padding-left: 30px;
+body{
+    font-family: 'Monserrat', sans-serif; /*tipología de letra importada y delimitando su uso*/
 }
 
-#banner{
-    width:100%;
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;
 }
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top:110px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color:#c78c19;
+}
+
+.productos li:active{
+    border-color:#088c19;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding:40px;
+}
+
+.copyright{
+    color:#FFFFFF;
+    font-size: 13px;
+    margin:20px;
+}
+form{
+    margin: 40px 0;
+
+}
+
+form label, form legend{
+    display: block; /*posición vertical*/
+    font-size: 20px; /*tamaño letra*/
+    margin: 0 0 10px;
+
+}
+.input-padron{
+    display: block; /*posición vertical*/
+    margin: 0 0 20px;
+    padding: 10px 25px; /*aumento de tamaño espacio interno sdel cuadro de diálogo*/
+    width: 50%; /*queremos que ocupe el 50% de los 940px solicitados en el main*/
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #c78c19;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all; /*cambia de color el boton con 1 segundo de retraso y all transform (todas las características*/
+    cursor: pointer /* cambia el cursor a la manito*/
+}
+
+.enviar:hover{
+    background:darkorange;
+    transform: scale(1.2); /* Si le colocamos además "rotate(360deg)" va a girar y el "scale" sirve para lograr el efecto de aumento de tamaño en el botón enviar en un 20%*/
+    
+}
+
+table{
+    margin: 40px 40px;
+}
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+
+/*Iniciando CSS para nuestra Home*/
+
+.banner{
+    width: 100%;
+}
+
+/*main > p{ --- Esto significa que se va a pintar en ese color sólo los "p" que sean hijos del main
+    background:red;
+}
+
+img + p{ ---Esto significa que sólo se va a pintar el primer "p" que se encuentre después de la imagen
+    background: #088c19;
+}
+
+img ~ p{ ---esto significa que va a pintar todos los "p" que se encuentren después de la img
+    background: fuchsia;
+}
+
+.principal p:not(#mision){ ---esto significa que se va a pintar todos los parrafos "p" del principal menos el ID mision
+    background: violet;
+}*/
 
 .principal{
-    background: #CCCCCC;
-    padding: 20px;
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px; /*convención para centralizar el texto*/
+    margin: 0 auto;
 }
-
-.titulo-centralizado{
+.titulo-principal{
     text-align: center;
+    font-size: 2em; /*2 em significa que es dos veces el tamaño original*/
+    margin: 0 0 1em; /*1em es una vez más grande la separación de la original*/
+    clear: left; /*cualquier configuración que venga despues del título a la izquierda, lo limpie. Es para que no se modifique con las próximas configuraciones*/
+    /*color: rgba(red, green, blue, 0.3) /* este parámetro es para darle una opacidad con el 4 elemento a los colores, en este caso, del título*/
 }
 
-p{
-    text-align: center;
+/*.titulo-principal:first-letter{
+    font-weight: bold; /*cambiar primera letra de los títulos a Negrita (bold)
 }
-
-em strong{
-    color:red;
+.titulo-prinicpal:before{ /*sirve para agregar un elemento antes de... Ej: los títulos
+    content:"["
 }
+.tutolo-principal:after{ /*adiciona un elemento cuando termina la oración.
+    content:"]"
+}    
+p:first-line{
+    font-style: italic; /*cambiar la primera linea de todos los párrafos a "italic"
+}*/
 
-#mision{
-    font-size: 20px;
+.principal p{
+    margin: 0 0 1em;
 }
-
-.diferenciales{
-    background: #FFFFFF;
-    padding: 30px;
+.principal strong{
+    font-size: bold;
 }
-
-.items{
+.principal em{
     font-style: italic;
 }
 
-ul{
+.utensilios{
+    width: 120px; /*se puede calcular el tamaño para que se pueda ajustar a los diferencte tipos de pantalla, utilizando Ej: "calc(40% - (26px * 4)"*/
+    float: left; /* esta propiedad sirve para que el texto redondee la imagen centrada a la izquierda*/
+    margin: 0 20px 20px 0;
+}
+
+.mapa{
+    padding: 3em 0; /*tamaño 3 veces al que está configurado la fuente*/
+    background:linear-gradient(#FEFEFE, #888888); /*sirve para aplicar un degradé de colores en la selección donde podes incluir todos los colores que queramos, ocupando todos la misma proporción de superficie (esto se puede configurar para que un color determinado ocupe un mayor % Ej:orange 50%), e incluso si queremos que estén Ej:45deg*/
+
+    /*background:radial-gradient(); --- es idéntico al anterior pero los colores son circular en degradé*/ 
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+    
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
+    /*box-shadow:insert 0 0 30% red sombra interna*/
+}
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+    
+}
+
+.lista-diferenciales{
+    width: 40%;
     display: inline-block;
     vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
 }
 
-.imagenDiferenciales{
-    width: 50%;
+.items{
+    line-height: 1.5; /*esto aumenta en 1 más el 50% del texto que tenemos en referencial*/
 }
 
+.items:before{
+    content: "★";
+}
+
+.items:first-child{ /*pseudo clases last-child (último hijo); nth (2n)(elegimos todos los pares; nth (3) el tercer item en negro*/
+    font-weight: bold;
+
+}
+.imagen-diferenciales{
+    width: 60%;
+    transition: 400ms; /*transición para opacidad de 400 milisegundos*/
+    box-shadow: 10px -10px 30px 15px #000000 ;/*es una herramienta para colocarle sombra a la imagen sólo CSS3. Con 5 parametros, hacia la derecha, arriba(px en negativo), difumicidad 30px, expansión 15px y el color. Incluso se pueden colocar 2°, 3° vinculando el degradé (siempre siguiendo la misma sintaxis inicial separado con una "," y sombras internas utilizando "box-shadow:insert 0 0 30% red" ver .diferenciales */
+}
+
+.imagen-diferenciales:hover{ /* es un método para que cuando pase el mouse sobre esta referencia, funcione "opacity : 30%" opacidad - opaco en un 30%*/
+    opacity: 0.3;
+}
+
+.video{
+    width: 500px;
+    margin: 1em auto;
+}
+
+
+
+/*A PARTIR DE AQUÍ COMENZAMOS EL REACONDICIONAMIENTO PARA MOVILES*/
+
+
+
+@media screen and (max-width: 480px){
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video{
+        width: auto;
+    }
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+}
